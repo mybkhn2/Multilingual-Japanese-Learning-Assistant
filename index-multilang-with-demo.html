@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Japanese Learning Assistant - Multilingual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem auto;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+    .lang-btns {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    h2 {
+      color: #34495e;
+    }
+    ul {
+      margin-bottom: 2rem;
+    }
+    code {
+      background-color: #f2f2f2;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    .install-buttons {
+      margin: 20px 0;
+    }
+    .install-buttons a {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+    .preview {
+      margin: 2rem 0;
+    }
+    .preview img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-btns">
+    <button onclick="showLang('en')">English</button>
+    <button onclick="showLang('vi')">Tiếng Việt</button>
+    <button onclick="showLang('ja')">日本語</button>
+  </div>
+
+  <div class="install-buttons">
+    <a href="#" target="_blank">🌟 Install from Chrome Web Store</a>
+    <a href="#" target="_blank">🎬 View Demo</a>
+  </div>
+
+  <div class="preview">
+    <h2>🖼 Screenshot</h2>
+    
+  </div>
+
+  <section id="lang-en" class="active">
+    <h1>🌐 Japanese Learning Assistant - Multilingual Extension</h1>
+    <p>This Chrome extension allows users to select Japanese text on any website and instantly translate it into one of several supported languages.</p>
+    <h2>✨ Key Features</h2>
+<p>This extension doesn't just translate – it also explains Kanji readings and basic grammar patterns from the selected sentence. Great for Japanese learners and native speakers alike!</p>
+    <ul>
+      <li>Select Japanese text → tooltip appears → translate</li>
+      <li>Supports 6 languages: Vietnamese, English, Spanish, Sinhala, Korean, French</li>
+      <li>Language switcher with ❌ close button</li>
+    </ul>
+    <h2>How It Works</h2>
+    <ol>
+      <li>Install the extension</li>
+      <li>Select Japanese text → click tooltip</li>
+      <li>Translation appears in a popup</li>
+    </ol>
+  </section>
+
+  <section id="lang-vi">
+    <h1>🌐 Trợ Lý Học Tiếng Nhật - Hỗ Trợ Nhiều Ngôn Ngữ</h1>
+    <p>Tiện ích Chrome này giúp bạn bôi đen câu tiếng Nhật và dịch sang ngôn ngữ bạn chọn (tiếng Việt, Anh, Hàn, Pháp, v.v.).</p>
+    <h2>✨ Tính năng nổi bật</h2>
+<p>Không chỉ dịch, tiện ích còn phân tích cách đọc các từ Kanji và giải thích ngữ pháp có trong câu được chọn. Cũng hỗ trợ học tiếng Anh cho người Nhật.</p>
+    <ul>
+      <li>Bôi đen văn bản → hiện tooltip → click để dịch</li>
+      <li>Hỗ trợ 6 ngôn ngữ: Việt, Anh, Tây Ban Nha, Sri Lanka, Hàn, Pháp</li>
+      <li>Chọn ngôn ngữ ở góc dưới, có nút ❌ để ẩn</li>
+    </ul>
+    <h2>Cách sử dụng</h2>
+    <ol>
+      <li>Cài tiện ích vào trình duyệt</li>
+      <li>Bôi đen câu tiếng Nhật → click tooltip</li>
+      <li>Kết quả sẽ hiện ra trong popup nhỏ</li>
+    </ol>
+  </section>
+
+  <section id="lang-ja">
+    <h1>🌐 日本語学習アシスタント - 多言語対応拡張機能</h1>
+    <p>このChrome拡張機能は、Webサイト上の日本語の文章を選択して、選択した言語に翻訳できます。</p>
+    <h2>✨ 主な機能</h2>
+<p>翻訳だけでなく、選択された文に含まれる漢字の読み方や文法の解説も表示されます。日本人の英語学習にも便利です。</p>
+    <ul>
+      <li>日本語を選択 → ツールチップ表示 → 翻訳</li>
+      <li>対応言語：ベトナム語、英語、スペイン語、シンハラ語、韓国語、フランス語</li>
+      <li>画面右下に言語切替メニュー（❌で閉じる）</li>
+    </ul>
+    <h2>使い方</h2>
+    <ol>
+      <li>Chromeに拡張機能をインストール</li>
+      <li>日本語の文を選択 → ツールチップをクリック</li>
+      <li>数秒後に翻訳結果がポップアップで表示</li>
+    </ol>
+  </section>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+    }
+  </script>
+</body>
+</html>
